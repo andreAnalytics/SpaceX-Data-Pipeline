@@ -19,3 +19,16 @@ models:
         data_tests:
           - unique
           - not_null
+  
+  - name: launchesTransform
+    columns:
+    - name: id
+      tests:
+        - not_null
+        - unique
+  
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: launches
