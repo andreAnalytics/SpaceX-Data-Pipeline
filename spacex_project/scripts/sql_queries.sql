@@ -25,3 +25,11 @@ SELECT
     COUNT(*) AS launches_per_year
 FROM dbt_spacex.launchestransform
 GROUP BY 1;
+
+-- CREATE OR REPLACE VIEW dbt_spacex.successful_launches AS
+-- SELECT *
+-- FROM dbt_spacex.launchestransform
+-- WHERE SUCCESS = TRUE;
+
+SELECT *
+FROM dbt_spacex.successful_launches;
